@@ -1,3 +1,4 @@
+cat > src/utils/checkPermission.ts << 'EOF'
 import { ChatInputCommandInteraction, PermissionFlagsBits } from "discord.js";
 
 export async function checkPermission(
@@ -7,3 +8,4 @@ export async function checkPermission(
   if (!interaction.memberPermissions) return false;
   return interaction.memberPermissions.has(permission);
 }
+EOF
